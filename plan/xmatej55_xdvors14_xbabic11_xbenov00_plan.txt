@@ -1,0 +1,57 @@
+1.DEADLINES 
+21.3. - Zaloená štruktúra na GitHube, Visual Studio Inicializácia
+22.3. - ReadMe  
+25.3. - GUI + install, uninstall
+1.4. -  TDD hotovo
+10.4. - Matematická kninica (hotovo funkcie) 
+15.4. - Prepojenie GUI s kninicou a kódom hotovo
+17.4.-  MAKEFILE hotovo
+17.4 - Dokumentácia
+18.4. - Profiling hotovo
+21.4. - Debugging
+20.4. - Doxygen
+22.4. - Final touch, Vytváranie hodnotení èlenov tímu, Zhodnotenie dodrania plánu
+23.4.- ODOVZDANIE
+XX.X. - Inštalácia u zákazníka
+----------------------------------------
+2. Rozdelenie úloh
+xmatej55 -
+	Plánovanie
+	Kontrola dodrania termínov
+	GitHub správca
+	Matematematická kninica
+	oprava chıb (Debugging)
+xdvors14-
+	Makefile
+	GUI
+	Sfunkènenie GUI
+	Report chıb
+xbabic11-
+	ReadMe
+	install, uninstall
+	profiling
+xbenov00-
+	Dokumentácia
+	TDD
+	Doxygen
+Spoloèné úlohy-
+	problemy.txt
+	odevzdani.txt
+	plan a skutoènos vyhodnotenie
+	Prezentácia
+	Mockup
+	Hodnotenie èlenov (hodnotenie.txt)
+-------------------------
+3. Zvolené komunikaèné kanály:
+Facebook chat, MS Teams - hovory
+------------------------------------------------
+4. Zvolenı systém pre správu:
+VCS: GIT
+Hosting: https://github.com/
+Repository: https://github.com/kint3x/ivs-projekt-2
+Pozvali sme ako collaboratora úèet ivskontrola
+
+
+
+	
+	
