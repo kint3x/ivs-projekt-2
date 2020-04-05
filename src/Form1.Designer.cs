@@ -444,4 +444,3 @@
         private System.Windows.Forms.TextBox display;
     }
 }
-
