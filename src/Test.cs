@@ -8,16 +8,21 @@ namespace Testing
 {
     class Test
     {
-        [TestClass]
-        public class Test
-        {
-            [TestMethod]
-            public void TestAdd()
+            // Test súčet
+            public void TestAdd(double a, double b)
             {
-                int vysledek = obj.Add(1, 1);
-                Assert.AreEqual(20, vysledek);
-            }
+                a = 1;
+                b = 2;
+                if(a+b==3)
+                {
+                    Console.WriteLine("TestAdd successful.");
+                }
+                else
+                {
+                    Console.WriteLine("TestAdd failed!");
+                }
 
-        }
+            }
+            // Test odčítanie
     }
 }
