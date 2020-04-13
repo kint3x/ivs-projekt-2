@@ -67,7 +67,7 @@
             this.btn_1.TabIndex = 0;
             this.btn_1.Text = "1";
             this.btn_1.UseVisualStyleBackColor = false;
-            this.btn_1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_1.Click += new System.EventHandler(this.btn_1_Click);
             // 
             // btn_2
             // 
@@ -151,7 +151,7 @@
             this.btn_7.TabIndex = 6;
             this.btn_7.Text = "7";
             this.btn_7.UseVisualStyleBackColor = false;
-            this.btn_7.Click += new System.EventHandler(this.button7_Click);
+            this.btn_7.Click += new System.EventHandler(this.btn_7_Click);
             // 
             // btn_8
             // 
@@ -207,7 +207,7 @@
             this.btn_del.TabIndex = 10;
             this.btn_del.Text = "DEL";
             this.btn_del.UseVisualStyleBackColor = false;
-            this.btn_del.Click += new System.EventHandler(this.button11_Click);
+            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
             // 
             // btn_ac
             // 
@@ -235,6 +235,7 @@
             this.btn_div.TabIndex = 12;
             this.btn_div.Text = "/";
             this.btn_div.UseVisualStyleBackColor = false;
+            this.btn_div.Click += new System.EventHandler(this.btn_div_Click);
             // 
             // btn_mul
             // 
@@ -248,6 +249,7 @@
             this.btn_mul.TabIndex = 13;
             this.btn_mul.Text = "*";
             this.btn_mul.UseVisualStyleBackColor = false;
+            this.btn_mul.Click += new System.EventHandler(this.btn_mul_Click);
             // 
             // btn_sub
             // 
@@ -261,6 +263,7 @@
             this.btn_sub.TabIndex = 14;
             this.btn_sub.Text = "-";
             this.btn_sub.UseVisualStyleBackColor = false;
+            this.btn_sub.Click += new System.EventHandler(this.btn_sub_Click);
             // 
             // btn_sin
             // 
@@ -274,6 +277,7 @@
             this.btn_sin.TabIndex = 15;
             this.btn_sin.Text = "sin";
             this.btn_sin.UseVisualStyleBackColor = false;
+            this.btn_sin.Click += new System.EventHandler(this.btn_sin_Click);
             // 
             // btn_enter
             // 
@@ -287,6 +291,7 @@
             this.btn_enter.TabIndex = 16;
             this.btn_enter.Text = "=";
             this.btn_enter.UseVisualStyleBackColor = false;
+            this.btn_enter.Click += new System.EventHandler(this.btn_enter_Click);
             // 
             // btn_add
             // 
@@ -300,6 +305,7 @@
             this.btn_add.TabIndex = 17;
             this.btn_add.Text = "+";
             this.btn_add.UseVisualStyleBackColor = false;
+            this.btn_add.Click += new System.EventHandler(this.btn_add_Click);
             // 
             // printPreviewDialog1
             // 
@@ -337,6 +343,7 @@
             this.btn_sqrt.TabIndex = 20;
             this.btn_sqrt.Text = "n √ x";
             this.btn_sqrt.UseVisualStyleBackColor = false;
+            this.btn_sqrt.Click += new System.EventHandler(this.btn_sqrt_Click);
             // 
             // btn_fact
             // 
@@ -350,6 +357,7 @@
             this.btn_fact.TabIndex = 21;
             this.btn_fact.Text = "x!";
             this.btn_fact.UseVisualStyleBackColor = false;
+            this.btn_fact.Click += new System.EventHandler(this.btn_fact_Click);
             // 
             // btn_pow
             // 
@@ -363,7 +371,7 @@
             this.btn_pow.TabIndex = 22;
             this.btn_pow.Text = "x ^ n";
             this.btn_pow.UseVisualStyleBackColor = false;
-            this.btn_pow.Click += new System.EventHandler(this.button22_Click);
+            this.btn_pow.Click += new System.EventHandler(this.btn_pow_Click);
             // 
             // display
             // 
@@ -417,31 +425,30 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_1;
-        private System.Windows.Forms.Button btn_2;
-        private System.Windows.Forms.Button btn_3;
-        private System.Windows.Forms.Button btn_4;
-        private System.Windows.Forms.Button btn_5;
-        private System.Windows.Forms.Button btn_6;
-        private System.Windows.Forms.Button btn_7;
-        private System.Windows.Forms.Button btn_8;
-        private System.Windows.Forms.Button btn_9;
-        private System.Windows.Forms.Button btn_0;
-        private System.Windows.Forms.Button btn_del;
-        private System.Windows.Forms.Button btn_ac;
-        private System.Windows.Forms.Button btn_div;
-        private System.Windows.Forms.Button btn_mul;
-        private System.Windows.Forms.Button btn_sub;
-        private System.Windows.Forms.Button btn_sin;
-        private System.Windows.Forms.Button btn_enter;
-        private System.Windows.Forms.Button btn_add;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
-        private System.Windows.Forms.Button btn_dot;
-        private System.Windows.Forms.Button btn_sqrt;
-        private System.Windows.Forms.Button btn_fact;
-        private System.Windows.Forms.Button btn_pow;
         private System.Windows.Forms.TextBox display;
+        public System.Windows.Forms.Button btn_1;
+        public System.Windows.Forms.Button btn_2;
+        public System.Windows.Forms.Button btn_3;
+        public System.Windows.Forms.Button btn_4;
+        public System.Windows.Forms.Button btn_5;
+        public System.Windows.Forms.Button btn_6;
+        public System.Windows.Forms.Button btn_7;
+        public System.Windows.Forms.Button btn_8;
+        public System.Windows.Forms.Button btn_9;
+        public System.Windows.Forms.Button btn_0;
+        public System.Windows.Forms.Button btn_del;
+        public System.Windows.Forms.Button btn_ac;
+        public System.Windows.Forms.Button btn_div;
+        public System.Windows.Forms.Button btn_mul;
+        public System.Windows.Forms.Button btn_sub;
+        public System.Windows.Forms.Button btn_sin;
+        public System.Windows.Forms.Button btn_enter;
+        public System.Windows.Forms.Button btn_add;
+        public System.Windows.Forms.Button btn_dot;
+        public System.Windows.Forms.Button btn_sqrt;
+        public System.Windows.Forms.Button btn_fact;
+        public System.Windows.Forms.Button btn_pow;
     }
 }
 
