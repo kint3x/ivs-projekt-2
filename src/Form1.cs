@@ -191,7 +191,16 @@ namespace src
                 }
                 else
                 {
-                    display.Text = display.Text + ",";
+                    if (display.Text == "0" || enter == 1)
+                    {
+                        display.Text = "0,";
+                        enter = 0;
+                        bodka = 1;
+                    }
+                    else
+                    {
+                        display.Text = display.Text + ",";
+                    }
                 }
             }
         }
