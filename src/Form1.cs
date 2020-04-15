@@ -632,7 +632,7 @@ namespace src
                 }
 
                 a = Convert.ToDouble(display.Text);
-                nasobenie = 1;
+                delenie = 1;
                 if (bodka == 1)
                 {
                     if (display.Text.EndsWith(","))
