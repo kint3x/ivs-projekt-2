@@ -939,7 +939,7 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('+')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = display.Text.Split(',')[0];
+                        display.Text = ((display.Text.Split('+')[1])).Split(',')[1];
                     }
                     string vymazat = Convert.ToString(a) + "+";
                     b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
@@ -951,7 +951,7 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('-')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = display.Text.Split(',')[0];
+                        display.Text = ((display.Text.Split('-')[1])).Split(',')[1];
                     }
                     string vymazat = Convert.ToString(a) + "-";
                     b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
@@ -962,7 +962,7 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('*')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = display.Text.Split(',')[0];
+                        display.Text = ((display.Text.Split('*')[1])).Split(',')[1];
                     }
                     string vymazat = Convert.ToString(a) + "*";
                     b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
@@ -973,7 +973,7 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('/')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = display.Text.Split(',')[0];
+                        display.Text = ((display.Text.Split('/')[1])).Split(',')[1];
                     }
                     string vymazat = Convert.ToString(a) + "/";
                     b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
@@ -984,7 +984,7 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('^')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = display.Text.Split(',')[0];
+                        display.Text = ((display.Text.Split('^')[1])).Split(',')[1];
                     }
                     string vymazat = Convert.ToString(a) + "^";
                     b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
