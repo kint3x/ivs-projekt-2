@@ -1054,7 +1054,7 @@ namespace src
             }
             else
             {
-                pomocna = 0;
+                
                 if (bodka == 1)
                 {
                     if (display.Text.EndsWith(","))
@@ -1080,6 +1080,10 @@ namespace src
                 }
                 else if (rozdiel == 1)
                 {
+                    if (pomocna == 1 && bodka == 1)
+                    {
+                        display.Text = display.Text.Replace("--", "-");
+                    }   
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('-')[1])).Split(',')[1]) == 0)
                     {
                         display.Text = ((display.Text.Split('-')[1])).Split(',')[0];
@@ -1091,7 +1095,14 @@ namespace src
                         b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
                     }
                     rozdiel = 0;
-                    display.Text = Convert.ToString(math.Rozdiel(a, b));
+                        if (pomocna == 1)
+                        {
+                            display.Text = Convert.ToString(math.Rozdiel(a, -b));
+                        }
+                        else
+                        {
+                            display.Text = Convert.ToString(math.Rozdiel(a, b));
+                        }
                 }
                 else if (nasobenie == 1)
                 {
@@ -1158,6 +1169,7 @@ namespace src
                 }
                 enter = 1;
                 bodka = 0;
+                pomocna = 0;
             }
         }
 
