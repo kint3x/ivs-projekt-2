@@ -24,7 +24,9 @@ namespace src
         private int odmocnina = 0;
         private int sinus = 0;
         private int pomocna = 0;
-        
+
+        private int exception_stav;
+
         private double a;
         private double b;
         
@@ -416,6 +418,7 @@ namespace src
 
         public void btn_add_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ")|| display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -1132,7 +1135,15 @@ namespace src
                         b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
                     }
                     delenie = 0;
-                    display.Text = Convert.ToString(math.Delenie(a, b));
+                    try
+                    {
+                        display.Text = Convert.ToString(math.Delenie(a, b));
+                    }
+                    catch (InvalidOperationException exception)
+                    {
+                        exception_stav = 1;
+                        Is_exception(exception.Message);
+                    }
                 }
                 else if (mocnina == 1)
                 {
@@ -1261,6 +1272,25 @@ namespace src
                     odmocnina = 1;
                     enter = 0;
                 }
+            }
+        }
+        // Funkcia ma tri stavy , ak je exception_stav 1, znamena to, ze exception bola vyhodena a treba ju vypisat a nastavit na 2
+        // ak je exception_stav 2, tak bola vypisana a treba ju schovat vypisanim 0 a nastavit na 3 
+        // ak je exception_stav 3, tak nic nerobi
+        void Is_exception(string exception = "")
+        {
+            if (exception_stav == 1)
+            {
+                display.ForeColor = System.Drawing.Color.Red;
+                display.Text = exception;
+
+                exception_stav = 2;
+            }
+            else if (exception_stav == 2)
+            {
+                display.ForeColor = System.Drawing.Color.Black;
+                display.Text = "0";
+                exception_stav = 3;
             }
         }
     }
