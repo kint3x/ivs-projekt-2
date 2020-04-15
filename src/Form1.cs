@@ -171,6 +171,19 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 mocnina = 1;
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+                }
                 display.Text = display.Text + "^";
                 enter = 0;
                 bodka = 0;
@@ -452,7 +465,22 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 sucet = 1;
-                display.Text = display.Text + "+";
+                
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+
+                }
+                display.Text = display.Text + "+"; 
                 enter = 0;
                 bodka = 0;
 
@@ -522,6 +550,19 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 rozdiel = 1;
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+                }
                 display.Text = display.Text + "-";
                 enter = 0;
                 bodka = 0;
@@ -592,6 +633,19 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 nasobenie = 1;
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+                }
                 display.Text = display.Text + "/";
                 enter = 0;
                 bodka = 0;
@@ -662,6 +716,19 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 nasobenie = 1;
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+                }
                 display.Text = display.Text + "*";
                 enter = 0;
                 bodka = 0;
@@ -733,6 +800,19 @@ namespace src
 
                 a = Convert.ToDouble(display.Text);
                 faktorial = 1;
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                        bodka = 0;
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                        bodka = 0;
+                    }
+                }
                 display.Text = display.Text + "!";
                 enter = 0;
             }
@@ -847,6 +927,17 @@ namespace src
             }
             else
             {
+                if (bodka == 1)
+                {
+                    if (display.Text.EndsWith(","))
+                    {
+                        display.Text = display.Text.Remove(display.Text.Length - 1);
+                    }
+                    else if (Convert.ToInt64(display.Text.Split(',')[1]) == 0)
+                    {
+                        display.Text = display.Text.Split(',')[0];
+                    }
+                }
                 if (sucet == 1)
                 {
                     string vymazat = Convert.ToString(a) + "+";
