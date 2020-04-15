@@ -341,7 +341,7 @@
             this.btn_sqrt.Name = "btn_sqrt";
             this.btn_sqrt.Size = new System.Drawing.Size(101, 49);
             this.btn_sqrt.TabIndex = 20;
-            this.btn_sqrt.Text = "n √ x";
+            this.btn_sqrt.Text = "√ x";
             this.btn_sqrt.UseVisualStyleBackColor = false;
             this.btn_sqrt.Click += new System.EventHandler(this.btn_sqrt_Click);
             // 
