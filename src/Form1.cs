@@ -1010,6 +1010,7 @@ namespace src
                     display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
                 }
                 enter = 1;
+                bodka = 0;
             }
         }
 
