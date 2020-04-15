@@ -939,11 +939,14 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('+')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = ((display.Text.Split('+')[1])).Split(',')[1];
+                        display.Text = ((display.Text.Split('+')[1])).Split(',')[0];
+                        b = Convert.ToDouble(display.Text);
                     }
-                    string vymazat = Convert.ToString(a) + "+";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-
+                    else
+                    {
+                        string vymazat = Convert.ToString(a) + "+";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
                     sucet = 0;
                     display.Text = Convert.ToString(math.Sucet(a, b));
                 }
@@ -951,10 +954,14 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('-')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = ((display.Text.Split('-')[1])).Split(',')[1];
+                        display.Text = ((display.Text.Split('-')[1])).Split(',')[0];
+                        b = Convert.ToDouble(display.Text);
                     }
-                    string vymazat = Convert.ToString(a) + "-";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    else
+                    {
+                        string vymazat = Convert.ToString(a) + "-";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
                     rozdiel = 0;
                     display.Text = Convert.ToString(math.Rozdiel(a, b));
                 }
@@ -962,10 +969,14 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('*')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = ((display.Text.Split('*')[1])).Split(',')[1];
+                        display.Text = ((display.Text.Split('*')[1])).Split(',')[0];
+                        b = Convert.ToDouble(display.Text);
                     }
-                    string vymazat = Convert.ToString(a) + "*";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    else
+                    {
+                        string vymazat = Convert.ToString(a) + "*";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
                     nasobenie = 0;
                     display.Text = Convert.ToString(math.Nasobenie(a, b));
                 }
@@ -973,10 +984,14 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('/')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = ((display.Text.Split('/')[1])).Split(',')[1];
+                        display.Text = ((display.Text.Split('/')[1])).Split(',')[0];
+                        b = Convert.ToDouble(display.Text);
                     }
-                    string vymazat = Convert.ToString(a) + "/";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    else
+                    {
+                        string vymazat = Convert.ToString(a) + "/";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
                     delenie = 0;
                     display.Text = Convert.ToString(math.Delenie(a, b));
                 }
@@ -984,10 +999,14 @@ namespace src
                 {
                     if (bodka == 1 && Convert.ToInt64(((display.Text.Split('^')[1])).Split(',')[1]) == 0)
                     {
-                        display.Text = ((display.Text.Split('^')[1])).Split(',')[1];
+                        display.Text = ((display.Text.Split('^')[1])).Split(',')[0];
+                        b = Convert.ToDouble(display.Text);
                     }
-                    string vymazat = Convert.ToString(a) + "^";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    else
+                    {
+                        string vymazat = Convert.ToString(a) + "^";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
                     mocnina = 0;
                     display.Text = Convert.ToString(math.Mocnina(a, b));
                 }
