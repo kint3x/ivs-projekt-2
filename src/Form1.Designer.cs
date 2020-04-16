@@ -186,10 +186,10 @@
             this.btn_0.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_0.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_0.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_0.Location = new System.Drawing.Point(83, 484);
+            this.btn_0.Location = new System.Drawing.Point(8, 484);
             this.btn_0.Margin = new System.Windows.Forms.Padding(4);
             this.btn_0.Name = "btn_0";
-            this.btn_0.Size = new System.Drawing.Size(67, 62);
+            this.btn_0.Size = new System.Drawing.Size(142, 62);
             this.btn_0.TabIndex = 9;
             this.btn_0.Text = "0\r\n";
             this.btn_0.UseVisualStyleBackColor = false;
@@ -284,10 +284,10 @@
             this.btn_enter.BackColor = System.Drawing.SystemColors.GrayText;
             this.btn_enter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.btn_enter.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_enter.Location = new System.Drawing.Point(299, 484);
+            this.btn_enter.Location = new System.Drawing.Point(245, 484);
             this.btn_enter.Margin = new System.Windows.Forms.Padding(4);
             this.btn_enter.Name = "btn_enter";
-            this.btn_enter.Size = new System.Drawing.Size(93, 62);
+            this.btn_enter.Size = new System.Drawing.Size(195, 62);
             this.btn_enter.TabIndex = 16;
             this.btn_enter.Text = "=";
             this.btn_enter.UseVisualStyleBackColor = false;
@@ -341,7 +341,7 @@
             this.btn_sqrt.Name = "btn_sqrt";
             this.btn_sqrt.Size = new System.Drawing.Size(101, 49);
             this.btn_sqrt.TabIndex = 20;
-            this.btn_sqrt.Text = "n √ x";
+            this.btn_sqrt.Text = "√ x";
             this.btn_sqrt.UseVisualStyleBackColor = false;
             this.btn_sqrt.Click += new System.EventHandler(this.btn_sqrt_Click);
             // 
@@ -415,6 +415,7 @@
             this.Controls.Add(this.btn_2);
             this.Controls.Add(this.btn_1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Calculator";
