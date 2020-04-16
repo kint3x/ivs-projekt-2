@@ -4,8 +4,10 @@ using System.Text;
 
 namespace mathlib
 {
+
 	public class math
 	{
+		public const double EPSILON = 0.0000000001;
 		public static double Sucet(double a, double b)
 		{
 			return a + b;
@@ -70,7 +72,7 @@ namespace mathlib
 			return -abs;
 		}
 
-		public static double Sinus(double radians, double epsilon)
+		public static double Sinus(double radians, double epsilon = EPSILON)
 		{
 			radians = radians * 3.141592654 / 180;
 			int i = 1, moc = 3;
