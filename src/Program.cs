@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using mathlib;
-
+using TDD;
 
 namespace src
 {
@@ -26,6 +26,12 @@ namespace src
             Console.WriteLine("SIN 50: {0}\n", math.Sinus(50, 0.0000001));
             Console.WriteLine("MOCNINA 2na3: {0}\n", math.Mocnina(2, 3));
             Console.WriteLine("DRUHA ODMOCNINA Z 9: {0}\n", math.findSqrt(9));
+
+            Console.WriteLine("TDD TESTY:");
+            TDD_testy testy = new TDD_testy();
+            testy.Spusti_testy();
+
+
             // DOCASNE TESTY END
         }
     }

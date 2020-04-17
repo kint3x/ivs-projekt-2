@@ -37,6 +37,7 @@ namespace src
 
         public void btn_1_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -56,6 +57,7 @@ namespace src
 
         public void btn_7_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -80,6 +82,7 @@ namespace src
 
         public void btn_del_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text == "Sin " || display.Text == "√")
             {
                 display.Text = "0";
@@ -122,6 +125,7 @@ namespace src
 
         public void btn_pow_Click(object sender, EventArgs e)
         {
+            Is_exception();
             pomocna = 0;
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
@@ -216,6 +220,7 @@ namespace src
 
         public void btn_8_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -235,6 +240,7 @@ namespace src
 
         public void btn_0_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -254,6 +260,7 @@ namespace src
 
         public void btn_dot_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -287,6 +294,7 @@ namespace src
 
         public void btn_3_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -306,6 +314,7 @@ namespace src
 
         public void btn_2_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -325,6 +334,7 @@ namespace src
 
         public void btn_6_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -344,6 +354,7 @@ namespace src
 
         public void btn_5_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -363,6 +374,7 @@ namespace src
 
         public void btn_4_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -382,6 +394,7 @@ namespace src
 
         public void btn_9_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (faktorial == 1)
             {
                 display.Text = display.Text;
@@ -401,6 +414,7 @@ namespace src
 
         public void btn_ac_Click(object sender, EventArgs e)
         {
+            Is_exception();
             display.Clear();
             display.Text = "0";
             sucet = 0;
@@ -512,6 +526,7 @@ namespace src
 
         public void btn_sub_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if ( display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -683,6 +698,7 @@ namespace src
 
         public void btn_div_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ")|| display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -774,6 +790,7 @@ namespace src
 
         public void btn_mul_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ")|| display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -866,6 +883,7 @@ namespace src
 
         public void btn_fact_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -948,6 +966,7 @@ namespace src
 
         public void btn_sin_Click(object sender, EventArgs e)
         {
+            Is_exception();
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
@@ -1186,6 +1205,7 @@ namespace src
 
         private void btn_sqrt_Click(object sender, EventArgs e)
         {
+            Is_exception();
             pomocna = 0;
             if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
             {
