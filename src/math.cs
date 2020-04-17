@@ -30,7 +30,7 @@ namespace mathlib
 		{
 			return a - b;
 		}
-
+		// Vrati faktorial cisla
 		public static double Faktorial(double a)
 		{
 			double res = 1;
@@ -50,7 +50,7 @@ namespace mathlib
 			}
 			return res;
 		}
-
+		// Vrati N-tú odmocninu z čísla x
 		public static double Mocnina(double x, double n)
 		{ // funkcia ktora umocnuje
 			if (n == 0)
@@ -65,17 +65,17 @@ namespace mathlib
 			}
 			return x;
 		}
-
+		// Vrati absolutnu hodnotu cisla
 		public static double Absolutna(double abs)
 		{
 			if (abs >= 0) return abs;
 			return -abs;
 		}
-
+		// Vrati sinus cisla, najskor si premeni radiany na stupne a potom vypocita sinus, je mozne zadat aj inu presnost
 		public static double Sinus(double radians, double epsilon = EPSILON)
 		{
 			if (radians == 90) return 1;
-			if (radians%180 == 0) return 0;
+			if (radians % 180 == 0) return 0;
 
 			radians = radians * 3.141592654 / 180;
 			int i = 1, moc = 3;
@@ -101,58 +101,27 @@ namespace mathlib
 			}
 
 		}
-
-		static double Square(double n,
-					 double i, double j)
+		// Iterativna metoda na najdenie odmconiny Babylonian method
+		// Vrati odmocninu z cisla
+		public static double findSqrt(double S)
 		{
-			double mid = (i + j) / 2;
-			double mul = mid * mid;
 
-			// If mid itself is the square root, 
-			// return mid 
-			if ((mul == n) ||
-				(Absolutna(mul - n) < 0.00001))
-				return mid;
-
-			// If mul is less than n,  
-			// recur second half 
-			else if (mul < n)
-				return Square(n, mid, j);
-
-			// Else recur first half 
-			else
-				return Square(n, i, mid);
-		}
-
-		// Function to find the square root of n 
-		public static double findSqrt(double n)
-		{
-			double i = 1;
-
-			// While the square root is not found 
-			Boolean found = false;
-			while (!found)
+			double epsilon = 0.00001;
+			if (S < 0)
 			{
-
-				// If n is a perfect square 
-				if (i * i == n)
-				{
-					return i;
-				}
-
-				else if (i * i > n)
-				{
-
-					// Square root will lie in the 
-					// interval i-1 and i 
-					double res = Square(n, i - 1, i);
-					return i;
-				}
-				i++;
+				throw new System.InvalidOperationException("Odmocnina zo zaporneho cisla? Really?");
 			}
-			
-			throw new System.InvalidOperationException("Nenašla sa odmocnina!");
+			else if (S == 0) return 0;
 
+			double x = S / 2;
+			double xPrev = 0;
+			do
+			{
+				xPrev = x;
+				x = (xPrev + S / xPrev) / 2; 
+			} while (Absolutna(x - xPrev) > epsilon);
+		
+			return(x);
 		}
 
 	}
