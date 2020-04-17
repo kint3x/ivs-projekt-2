@@ -74,6 +74,9 @@ namespace mathlib
 
 		public static double Sinus(double radians, double epsilon = EPSILON)
 		{
+			if (radians == 90) return 1;
+			if (radians%180 == 0) return 0;
+
 			radians = radians * 3.141592654 / 180;
 			int i = 1, moc = 3;
 			double vysledok = radians, povodny = 0;
