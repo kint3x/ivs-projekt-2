@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using mathlib;
 using System.IO;
 using System.Windows.Forms;
+using System.ComponentModel;
 
 namespace TDD
 {
@@ -50,6 +51,15 @@ namespace TDD
             file.Write("<td>TEST[{0}]</td><td><b style='color:red;'>FAIL = ", id_test);
             file.WriteLine("{0}</b></td>", result);
             file.WriteLine("</tr>");
+        }
+
+        private void Negative_fail(int id_test)
+        {
+            file.WriteLine("<tr>");
+            file.Write("<td>TEST[{0}]</td><td><b style='color:red;'>FAIL = ", id_test);
+            file.WriteLine("</b></td>");
+            file.WriteLine("</tr>");
+
         }
 
         // TESTY 
@@ -137,7 +147,10 @@ namespace TDD
             }
             catch (InvalidOperationException exception)
             {
-                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+                if(exception != null)
+                { 
+                    Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+                }
             }
         }
 
@@ -180,14 +193,14 @@ namespace TDD
         {
             try
             {
-                if (math.Sinus(40) == 40) Success_test(14);
-                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Sinus(40)), 14);
+                if (math.Sinus(0) == 0) Success_test(17);
+                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Sinus(40)), 17);
 
-                if (math.Sinus(0) == 0) Success_test(15);
-                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Sinus(0)), 15);
+                if (math.Sinus(90) == 1) Success_test(18);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Sinus(0)), 18);
 
-                if (math.Sinus(-420) == 420) Success_test(16);
-                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Sinus(-420)), 16);
+                if (math.Sinus(-90) == -1) Success_test(19);
+                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Sinus(-420)), 19);
             }
             catch (InvalidOperationException exception)
             {
@@ -196,7 +209,6 @@ namespace TDD
         }
 
        
-
         void ODM_TEST()
         {
             try
@@ -206,11 +218,21 @@ namespace TDD
 
                 if (math.findSqrt(0) == 0) Success_test(21);
                 else Fail_test(string.Format("Expected: 0 Got: {0}", math.findSqrt(0)), 21);
-
+                
+                if (math.findSqrt(-9)) Negative_fail
+                
             }
             catch (InvalidOperationException exception)
             {
-                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+                if (exception != null)
+                {
+                    Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+                }
+            }
+            catch (Exception e)
+            {
+                Negative_fail
+
             }
         }
 
