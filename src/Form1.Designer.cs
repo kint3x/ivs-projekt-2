@@ -452,4 +452,3 @@
         public System.Windows.Forms.Button btn_pow;
     }
 }
-
