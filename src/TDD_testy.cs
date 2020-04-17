@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using mathlib;
 using System.IO;
+using System.Windows.Forms;
 
 namespace TDD
 {
@@ -21,10 +22,15 @@ namespace TDD
                 file.WriteLine("<html><head><title>VYSLEDKY TESTOV</title><style><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100%;}td, th {border: 1px solid #dddddd;text-align: left;padding: 8px;}tr:nth-child(even){background-color: #dddddd;}</style></head><body><table><tr><th> TEST </th><th> VYSLEDOK </th></tr>");
                 file.WriteLine("<b>---- SUM TESTY ----</b><br>");
                 // sem pôjdu funkcie s testami postupne ako ich budeš robiť
-                SUM_TEST();
-                DIV_TEST();
-                SUB_TEST();
-                MUL_TEST();
+                SUC_TEST();
+                DEL_TEST();
+                ODC_TEST();
+                NAS_TEST();
+                FAKT_TEST();
+                MOC_TEST();
+                ABS_TEST();
+                SIN_TEST();
+                ODM_TEST();
 
                 file.WriteLine("</table></body></html>");
             }
@@ -47,7 +53,7 @@ namespace TDD
         }
 
         // TESTY 
-        void SUM_TEST()
+        void SUC_TEST()
         { 
             try
             {
@@ -70,7 +76,7 @@ namespace TDD
                 }
             }
         }
-        void DIV_TEST()
+        void DEL_TEST()
         {
             try
             {
@@ -86,7 +92,7 @@ namespace TDD
             }
         }
 
-        void SUB_TEST()
+        void ODC_TEST()
         {
             try
             {
@@ -103,7 +109,7 @@ namespace TDD
             }
         }
 
-        void MUL_TEST()
+        void NAS_TEST()
         {
             try
             {
@@ -119,10 +125,94 @@ namespace TDD
             }
         }
 
+        void FAKT_TEST()
+        {
+            try
+            {
+                if (math.Faktorial(6) == 720) Success_test(10);
+                else Fail_test(string.Format("Expected: 720 Got: {0}", math.Faktorial(6)), 10);
 
+                if (math.Faktorial(4) == 24) Success_test(11);
+                else Fail_test(string.Format("Expected: 24 Got: {0}", math.Faktorial(4)), 11);
+            }
+            catch (InvalidOperationException exception)
+            {
+                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+        }
 
+        void MOC_TEST()
+        {
+            try
+            {
+                if (math.Mocnina(2, 3) == 8) Success_test(12);
+                else Fail_test(string.Format("Expected: 8 Got: {0}", math.Mocnina(2, 3)), 12);
 
+                if (math.Mocnina(8, 2) == 64) Success_test(13);
+                else Fail_test(string.Format("Expected: 64 Got: {0}", math.Mocnina(8, 2)), 13);
+            }
+            catch (InvalidOperationException exception)
+            {
+                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+        }
 
+        void ABS_TEST()
+        {
+            try
+            {
+                if (math.Absolutna(40) == 40) Success_test(14);
+                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Absolutna(40)), 14);
+
+                if (math.Absolutna(0) == 0) Success_test(15);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Absolutna(0)), 15);
+
+                if (math.Absolutna(-420) == 420) Success_test(16);
+                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Absolutna(-420)), 16);
+            }
+            catch (InvalidOperationException exception)
+            {
+                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+        }
+
+        void SIN_TEST()
+        {
+            try
+            {
+                if (math.Sinus(40) == 40) Success_test(14);
+                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Sinus(40)), 14);
+
+                if (math.Sinus(0) == 0) Success_test(15);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Sinus(0)), 15);
+
+                if (math.Sinus(-420) == 420) Success_test(16);
+                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Sinus(-420)), 16);
+            }
+            catch (InvalidOperationException exception)
+            {
+                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+        }
+
+       
+
+        void ODM_TEST()
+        {
+            try
+            {
+                if (math.findSqrt(49) == 7) Success_test(20);
+                else Fail_test(string.Format("Expected: 7 Got: {0}", math.findSqrt(40)), 20);
+
+                if (math.findSqrt(0) == 0) Success_test(21);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.findSqrt(0)), 21);
+
+            }
+            catch (InvalidOperationException exception)
+            {
+                Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+        }
 
         /**
          *  SABLONA AKO VYTVARAT FUNKCIE > POTOM KAZDU NOVU FUNKCIU (TEST) treba zaradit hore do vyznaceneho miesta vo funkcii Spusti_testy()
