@@ -218,8 +218,8 @@ namespace TDD
 
                 if (math.findSqrt(0) == 0) Success_test(21);
                 else Fail_test(string.Format("Expected: 0 Got: {0}", math.findSqrt(0)), 21);
-                
-                if (math.findSqrt(-9)) Negative_fail
+
+                //if (math.findSqrt(-9)) Negative_fail
                 
             }
             catch (InvalidOperationException exception)
@@ -231,7 +231,7 @@ namespace TDD
             }
             catch (Exception e)
             {
-                Negative_fail
+                //Negative_fail
 
             }
         }

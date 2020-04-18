@@ -213,7 +213,11 @@ namespace src
         public void btn_sub_Click(object sender, EventArgs e)
         {
             Is_exception();
-            if ( display.Text.EndsWith("√"))
+            if (display.Text == "0")
+            {
+                display.Text = "-";
+            }
+            else if ( display.Text.EndsWith("√"))
             {
                 display.Text = display.Text;
             }
