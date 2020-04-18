@@ -97,6 +97,7 @@ namespace src
                 if (bodka > 1)
                 {
                     display.Text = display.Text;
+                    bodka = bodka - 1;
                 }
                 else
                 {
@@ -360,7 +361,7 @@ namespace src
                 }
                 if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^"))
                 {
-                    ;
+                    display.Text = display.Text;
                 }
                 else
                 {
@@ -663,21 +664,28 @@ namespace src
                     {
                         display.Text = ((display.Text.Split('-')[1])).Split(',')[0];
                         b = Convert.ToDouble(display.Text);
+                        if (pomocna == 0)
+                        {
+                            display.Text = Convert.ToString(math.Rozdiel(a, b));
+                        }
+                        else
+                        {
+                            display.Text = Convert.ToString(math.Rozdiel(a, -b));
+                        }
+                    }
+                    else if (pomocna == 1 && bodka == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "-";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        display.Text = Convert.ToString(math.Rozdiel(a, -b));
                     }
                     else
                     {
                         string vymazat = Convert.ToString(a) + "-";
                         b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    }
-                    rozdiel = 0;
-                    if (pomocna == 1)
-                    {
-                        display.Text = Convert.ToString(math.Rozdiel(a, -b));
-                    }
-                    else
-                    {
                         display.Text = Convert.ToString(math.Rozdiel(a, b));
                     }
+                    rozdiel = 0;
                 }
                 else if (nasobenie == 1)
                 {
