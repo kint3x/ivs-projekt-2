@@ -738,19 +738,40 @@ namespace src
                         b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
                     }
                     mocnina = 0;
-                    display.Text = Convert.ToString(math.Mocnina(a, b));
+                    try { display.Text = Convert.ToString(math.Mocnina(a, b)); }
+                    catch (InvalidOperationException ex)
+                    {
+                        if (ex != null)
+                        {
+                            Is_exception(ex.Message);
+                        }
+                    }
                 }
                 else if (faktorial == 1)
                 {
 
                     faktorial = 0;
-                    display.Text = Convert.ToString(math.Faktorial(a));
+                    try { display.Text = Convert.ToString(math.Faktorial(a)); }
+                    catch (InvalidOperationException ex)
+                    {
+                        if (ex != null)
+                        {
+                            Is_exception(ex.Message);
+                        }
+                    }
                 }
                 else if (odmocnina == 1)
                 {
                     odmocnina = 0;
                     a = Convert.ToDouble(display.Text.Replace("√", ""));
-                    display.Text = Convert.ToString(math.findSqrt(a));
+                    try { display.Text = Convert.ToString(math.findSqrt(a));}
+                    catch (InvalidOperationException ex)
+                    {
+                        if (ex != null)
+                        {
+                            Is_exception(ex.Message);
+                        }
+                    }
                 }
                 else if (sinus == 1)
                 {
