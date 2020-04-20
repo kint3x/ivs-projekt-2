@@ -34,9 +34,10 @@ namespace mathlib
 		public static double Faktorial(double a)
 		{
 			double res = 1;
-			if (a < 1)
+			if (a == 0) return 1;
+			if (a < 0)
 			{
-				throw new System.InvalidOperationException("Neda sa spravit faktorial z cisla mensieho ako 1!");
+				throw new System.InvalidOperationException("Neda sa spravit faktorial z cisla mensieho ako 0!");
 			}
 
 			if (a % 1 != 0)
