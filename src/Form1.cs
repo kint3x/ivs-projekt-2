@@ -25,7 +25,7 @@ namespace src
         private int sinus = 0;
         private int pomocna = 0;
 
-        private int exception_stav;
+        private int exception_stav=3;
 
         private double a;
         private double b;
@@ -743,6 +743,7 @@ namespace src
                     {
                         if (ex != null)
                         {
+                            exception_stav = 1;
                             Is_exception(ex.Message);
                         }
                     }
@@ -752,11 +753,13 @@ namespace src
 
                     faktorial = 0;
                     try { display.Text = Convert.ToString(math.Faktorial(a)); }
-                    catch (InvalidOperationException ex)
+                    catch (InvalidOperationException exception)
                     {
-                        if (ex != null)
+                        if (exception != null)
                         {
-                            Is_exception(ex.Message);
+                            Console.WriteLine(exception.Message);
+                            exception_stav = 1;
+                            Is_exception(exception.Message);
                         }
                     }
                 }
@@ -769,6 +772,7 @@ namespace src
                     {
                         if (ex != null)
                         {
+                            exception_stav = 1;
                             Is_exception(ex.Message);
                         }
                     }
