@@ -9,7 +9,8 @@ using System.ComponentModel;
 namespace TDD
 {
 
-    public class TDD_testy {
+    public class TDD_testy
+    {
         StreamWriter file;
         //FUNKCIA SPUSTI VSETKY TESTY
         public void Spusti_testy()
@@ -92,13 +93,20 @@ namespace TDD
             {
                 if (math.Delenie(10.5, 10) == 1.05) Success_test(4);
                 else Fail_test(string.Format("Expected: 1.05 Got: {0}", math.Delenie(10.5, 10)), 4);
-
-                if (math.Delenie(10.5, 0) == 1.5) Success_test(5);
-                else Fail_test(string.Format("Expected: 1.5 Got: {0}", math.Delenie(10.5, 0)), 5);
             }
             catch (InvalidOperationException exception)
             {
                 Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+            try
+            {
+
+                if (math.Delenie(10.5, 0) == 1.5) Success_test(5);
+                else Fail_test(string.Format("Expected: 1.5 Got: {0}", math.Delenie(10.5, 0)), 5);
+            }
+            catch (InvalidOperationException exception) {
+                if (exception!=null)
+                Success_test(5);
             }
         }
 
@@ -109,8 +117,8 @@ namespace TDD
                 if (math.Rozdiel(20, 8) == 12) Success_test(6);
                 else Fail_test(string.Format("Expected: 12 Got: {0}", math.Rozdiel(20, 8)), 6);
 
-                if (math.Rozdiel(0, -20) == -20) Success_test(7);
-                else Fail_test(string.Format("Expected: -20 Got: {0}", math.Rozdiel(20, 8)), 6);
+                if (math.Rozdiel(0, -20) == 20) Success_test(7);
+                else Fail_test(string.Format("Expected: 20 Got: {0}", math.Rozdiel(0, -20)), 7);
 
             }
             catch (InvalidOperationException exception)
@@ -128,6 +136,7 @@ namespace TDD
 
                 if (math.Nasobenie(-9, 6) == -54) Success_test(9);
                 else Fail_test(string.Format("Expected: -54 Got: {0}", math.Nasobenie(-9, 6)), 9);
+
             }
             catch (InvalidOperationException exception)
             {
@@ -144,6 +153,9 @@ namespace TDD
 
                 if (math.Faktorial(4) == 24) Success_test(11);
                 else Fail_test(string.Format("Expected: 24 Got: {0}", math.Faktorial(4)), 11);
+                
+                if (math.Faktorial(0) == 1) Success_test(12);
+                else Fail_test(string.Format("Expected: 1 Got: {0}", math.Faktorial(4)), 12);
             }
             catch (InvalidOperationException exception)
             {
@@ -152,21 +164,43 @@ namespace TDD
                     Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
                 }
             }
+            try
+            {
+                if (math.Faktorial(-1) != 0) Fail_test(string.Format("Got answer to non answerable", -1), 13);
+                else Fail_test(string.Format("Got answer to non answerable",-1), 13);
+            }
+            catch (InvalidOperationException exception)
+            {
+                if (exception != null)
+                {
+                    Success_test(13);
+                }
+            }
         }
 
         void MOC_TEST()
         {
             try
             {
-                if (math.Mocnina(2, 3) == 8) Success_test(12);
-                else Fail_test(string.Format("Expected: 8 Got: {0}", math.Mocnina(2, 3)), 12);
+                if (math.Mocnina(2, 3) == 8) Success_test(14);
+                else Fail_test(string.Format("Expected: 8 Got: {0}", math.Mocnina(2, 3)), 14);
 
-                if (math.Mocnina(8, 2) == 64) Success_test(13);
-                else Fail_test(string.Format("Expected: 64 Got: {0}", math.Mocnina(8, 2)), 13);
+                if (math.Mocnina(8, 2) == 64) Success_test(15);
+                else Fail_test(string.Format("Expected: 64 Got: {0}", math.Mocnina(8, 2)), 15);
             }
             catch (InvalidOperationException exception)
             {
                 Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+            }
+            try
+            {
+                if (math.Mocnina(8, 2.5) == 64) Fail_test(string.Format("Didnt expect return"),16);
+                else Fail_test(string.Format("Didnt expect return"),16);
+            }
+            catch (InvalidOperationException exception)
+            {
+                if (exception != null)
+                    Success_test(16);
             }
         }
 
@@ -174,14 +208,14 @@ namespace TDD
         {
             try
             {
-                if (math.Absolutna(40) == 40) Success_test(14);
-                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Absolutna(40)), 14);
+                if (math.Absolutna(40) == 40) Success_test(17);
+                else Fail_test(string.Format("Expected: 35 Got: {0}", math.Absolutna(40)), 17);
 
-                if (math.Absolutna(0) == 0) Success_test(15);
-                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Absolutna(0)), 15);
+                if (math.Absolutna(0) == 0) Success_test(18);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.Absolutna(0)), 18);
 
-                if (math.Absolutna(-420) == 420) Success_test(16);
-                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Absolutna(-420)), 16);
+                if (math.Absolutna(-420) == 420) Success_test(19);
+                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Absolutna(-420)), 19);
             }
             catch (InvalidOperationException exception)
             {
@@ -200,7 +234,10 @@ namespace TDD
                 else Fail_test(string.Format("Expected: 0 Got: {0}", math.Sinus(0)), 18);
 
                 if (math.Sinus(-90) == -1) Success_test(19);
-                else Fail_test(string.Format("Expected: 420 Got: {0}", math.Sinus(-420)), 19);
+                else Fail_test(string.Format("Expected: -1 Got: {0}", math.Sinus(-90)), 19);
+
+                if (math.Absolutna(math.Sinus(20) - 0.3420201433) < 0.01) Success_test(20);
+                else Fail_test(string.Format("Exppected: {0} < 0.01", math.Absolutna(math.Sinus(20) - 0.3420201433)), 20);
             }
             catch (InvalidOperationException exception)
             {
@@ -213,14 +250,14 @@ namespace TDD
         {
             try
             {
-                if (math.findSqrt(49) == 7) Success_test(20);
-                else Fail_test(string.Format("Expected: 7 Got: {0}", math.findSqrt(40)), 20);
+                if (math.findSqrt(49) == 7) Success_test(21);
+                else Fail_test(string.Format("Expected: 7 Got: {0}", math.findSqrt(40)), 21);
 
-                if (math.findSqrt(0) == 0) Success_test(21);
-                else Fail_test(string.Format("Expected: 0 Got: {0}", math.findSqrt(0)), 21);
+                if (math.findSqrt(0) == 0) Success_test(22);
+                else Fail_test(string.Format("Expected: 0 Got: {0}", math.findSqrt(0)), 22);
 
-                //if (math.findSqrt(-9)) Negative_fail
-                
+                if (math.Absolutna(math.findSqrt(2.5) - 1.58113883) < 0.01) Success_test(23);
+                else Fail_test(string.Format("Expected:{0} < 0.01", math.Absolutna(math.findSqrt(2.5) - 1.58113883)), 23);
             }
             catch (InvalidOperationException exception)
             {
@@ -229,11 +266,19 @@ namespace TDD
                     Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
                 }
             }
-            catch (Exception e)
+            try
             {
-                //Negative_fail
-
+                if (math.findSqrt(-1) == 7) Fail_test(string.Format("Didnt expect return"), 24);
+                else Fail_test(string.Format("Didnt expect return"), 24);
             }
+            catch (InvalidOperationException exception)
+            {
+                if (exception != null)
+                {
+                    Success_test(24);
+                }
+            }
+
         }
 
         /**
