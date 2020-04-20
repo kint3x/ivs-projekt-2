@@ -440,185 +440,199 @@ namespace src
 
         public void btn_sin_Click(object sender, EventArgs e)
         {
-            Is_exception();
-            if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
+            try
             {
-                display.Text = display.Text;
-            }
-            else
-            {
-                pomocna = 0;
-                if (sucet == 1)
+                if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
                 {
-                    string vymazat = Convert.ToString(a) + "+";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    sucet = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Sucet(a, b));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (rozdiel == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "-";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    rozdiel = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Rozdiel(a, b));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (nasobenie == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "*";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    nasobenie = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Nasobenie(a, b));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (delenie == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "/";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    delenie = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Delenie(a, b));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (mocnina == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "^";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    mocnina = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Mocnina(a, b));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (faktorial == 1)
-                {
-                    faktorial = 0;
-                    sinus = 1;
-                    display.Text = Convert.ToString(math.Faktorial(a));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (odmocnina == 1)
-                {
-                    odmocnina = 0;
-                    sinus = 1;
-                    a = Convert.ToDouble(display.Text.Replace("√", ""));
-                    display.Text = Convert.ToString(math.findSqrt(a));
-                    display.Text = "Sin " + display.Text;
-                }
-                else if (sinus == 1)
-                {
-                    a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
-                    display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
-                    display.Text = "Sin " + display.Text;
+                    display.Text = display.Text;
                 }
                 else
                 {
-                    if (display.Text == "0")
+                    pomocna = 0;
+                    if (sucet == 1)
                     {
-                        display.Text = "Sin ";
+                        string vymazat = Convert.ToString(a) + "+";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        sucet = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Sucet(a, b));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (rozdiel == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "-";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        rozdiel = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Rozdiel(a, b));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (nasobenie == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "*";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        nasobenie = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Nasobenie(a, b));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (delenie == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "/";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        delenie = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Delenie(a, b));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (mocnina == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "^";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        mocnina = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Mocnina(a, b));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (faktorial == 1)
+                    {
+                        faktorial = 0;
+                        sinus = 1;
+                        display.Text = Convert.ToString(math.Faktorial(a));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (odmocnina == 1)
+                    {
+                        odmocnina = 0;
+                        sinus = 1;
+                        a = Convert.ToDouble(display.Text.Replace("√", ""));
+                        display.Text = Convert.ToString(math.findSqrt(a));
+                        display.Text = "Sin " + display.Text;
+                    }
+                    else if (sinus == 1)
+                    {
+                        a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
+                        display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
+                        display.Text = "Sin " + display.Text;
                     }
                     else
                     {
-                        display.Text = "Sin " + display.Text;
+                        if (display.Text == "0")
+                        {
+                            display.Text = "Sin ";
+                        }
+                        else
+                        {
+                            display.Text = "Sin " + display.Text;
+                        }
+                        sinus = 1;
+                        enter = 0;
                     }
-                    sinus = 1;
-                    enter = 0;
                 }
+            }
+            catch (InvalidOperationException exception)
+            {
+                exception_stav = 1;
+                Is_exception(exception.Message);
             }
         }
 
         private void btn_sqrt_Click(object sender, EventArgs e)
         {
-            Is_exception();
-            pomocna = 0;
-            if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
+            try
             {
-                display.Text = display.Text;
-            }
-            else
-            {
-                if (sucet == 1)
+                pomocna = 0;
+                if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
                 {
-                    string vymazat = Convert.ToString(a) + "+";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    sucet = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Sucet(a, b));
-                    display.Text = "√" + display.Text;
-                }
-                else if (rozdiel == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "-";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    rozdiel = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Rozdiel(a, b));
-                    display.Text = "√" + display.Text;
-                }
-                else if (nasobenie == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "*";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    nasobenie = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Nasobenie(a, b));
-                    display.Text = "√" + display.Text;
-                }
-                else if (delenie == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "/";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    delenie = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Delenie(a, b));
-                    display.Text = "√" + display.Text;
-                }
-                else if (mocnina == 1)
-                {
-                    string vymazat = Convert.ToString(a) + "^";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
-                    mocnina = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Mocnina(a, b));
-                    display.Text = "√" + display.Text;
-                }
-                else if (faktorial == 1)
-                {
-                    faktorial = 0;
-                    odmocnina = 1;
-                    display.Text = Convert.ToString(math.Faktorial(a));
-                    display.Text = "√" + display.Text;
-                }
-                else if (odmocnina == 1)
-                {
-                    a = Convert.ToDouble(display.Text.Replace("√", ""));
-                    display.Text = Convert.ToString(math.findSqrt(a));
-                    display.Text = "√" + display.Text;
-                }
-                else if (sinus == 1)
-                {
-                    sinus = 0;
-                    odmocnina = 1;
-                    a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
-                    display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
-                    display.Text = "√" + display.Text;
+                    display.Text = display.Text;
                 }
                 else
                 {
-                    if (display.Text == "0")
+                    if (sucet == 1)
                     {
-                        display.Text = "√";
+                        string vymazat = Convert.ToString(a) + "+";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        sucet = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Sucet(a, b));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (rozdiel == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "-";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        rozdiel = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Rozdiel(a, b));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (nasobenie == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "*";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        nasobenie = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Nasobenie(a, b));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (delenie == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "/";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        delenie = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Delenie(a, b));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (mocnina == 1)
+                    {
+                        string vymazat = Convert.ToString(a) + "^";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        mocnina = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Mocnina(a, b));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (faktorial == 1)
+                    {
+                        faktorial = 0;
+                        odmocnina = 1;
+                        display.Text = Convert.ToString(math.Faktorial(a));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (odmocnina == 1)
+                    {
+                        a = Convert.ToDouble(display.Text.Replace("√", ""));
+                        display.Text = Convert.ToString(math.findSqrt(a));
+                        display.Text = "√" + display.Text;
+                    }
+                    else if (sinus == 1)
+                    {
+                        sinus = 0;
+                        odmocnina = 1;
+                        a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
+                        display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
+                        display.Text = "√" + display.Text;
                     }
                     else
                     {
-                        display.Text = "√" + display.Text;
+                        if (display.Text == "0")
+                        {
+                            display.Text = "√";
+                        }
+                        else
+                        {
+                            display.Text = "√" + display.Text;
+                        }
+                        odmocnina = 1;
+                        enter = 0;
                     }
-                    odmocnina = 1;
-                    enter = 0;
                 }
+            }
+            catch (InvalidOperationException exception)
+            {
+                exception_stav = 1;
+                Is_exception(exception.Message);
             }
         }
 
