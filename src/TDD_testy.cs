@@ -33,7 +33,7 @@ namespace TDD
                 ABS_TEST();
                 SIN_TEST();
                 ODM_TEST();
-
+                obecna_odmocnina_TEST();
                 file.WriteLine("</table></body></html>");
             }
         }
@@ -280,6 +280,41 @@ namespace TDD
             }
 
         }
+        void obecna_odmocnina_TEST()
+        {
+            try
+            {
+                if (math.Absolutna(math.obecna_odmocnina(49,3) - 3.65930571) < 0.001) Success_test(25);
+                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.obecna_odmocnina(49, 3) - 3.65930571)), 25);
+
+                if (math.Absolutna(math.obecna_odmocnina(300, 5) - 3.129134645) < 0.001) Success_test(26);
+                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.obecna_odmocnina(300, 5) - 3.129134645)), 26);
+
+                if (math.Absolutna(math.obecna_odmocnina(50, 30) - 1.139284879) < 0.001) Success_test(27);
+                else Fail_test(string.Format("Expected:{0} < 0.01", math.Absolutna(math.obecna_odmocnina(50, 30) - 1.139284879)), 27);
+            }
+            catch (InvalidOperationException exception)
+            {
+                if (exception != null)
+                {
+                    Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
+                }
+            }
+            try
+            {
+                if (math.Absolutna(math.obecna_odmocnina(-1, 5))==0) Fail_test(string.Format("Didnt expect return"), 28);
+                else Fail_test(string.Format("Didnt expect return"), 28);
+            }
+            catch (InvalidOperationException exception)
+            {
+                if (exception != null)
+                {
+                    Success_test(28);
+                }
+            }
+
+        }
+        
 
         /**
          *  SABLONA AKO VYTVARAT FUNKCIE > POTOM KAZDU NOVU FUNKCIU (TEST) treba zaradit hore do vyznaceneho miesta vo funkcii Spusti_testy()
