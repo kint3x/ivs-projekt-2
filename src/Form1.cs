@@ -24,6 +24,7 @@ namespace src
         private int odmocnina = 0;
         private int sinus = 0;
         private int pomocna = 0;
+        private int prazdna = 0;
 
         private int exception_stav=3;
 
@@ -127,6 +128,7 @@ namespace src
                 display.Text = "0";
                 sinus = 0;
                 odmocnina = 0;
+                prazdna = 0;
             }
             else if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("!") || display.Text.EndsWith("√"))
             {
@@ -193,6 +195,7 @@ namespace src
             Is_exception();
             nas_nula();
             pomocna = 0;
+            prazdna = 0;
         }
 
         public void btn_add_Click(object sender, EventArgs e)
@@ -506,9 +509,17 @@ namespace src
                     {
                         odmocnina = 0;
                         sinus = 1;
-                        string vymazat = Convert.ToString(a) + "√";
-                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        if (prazdna == 0)
+                        {
+                            string vymazat = Convert.ToString(a) + "√";
+                            b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        }
+                        else
+                        {
+                            b = Convert.ToDouble(display.Text.Replace("√", ""));
+                        }
                         display.Text = Convert.ToString(math.obecna_odmocnina(b,a));
+                        prazdna = 0;
                         display.Text = "Sin " + display.Text;
                     }
                     else if (sinus == 1)
@@ -604,9 +615,17 @@ namespace src
                     }
                     else if (odmocnina == 1)
                     {
-                        a = Convert.ToDouble(display.Text.Replace("√", ""));
-                        display.Text = Convert.ToString(math.findSqrt(a));
-                        display.Text = display.Text + "√";
+                        if (prazdna == 0)
+                        {
+                            string vymazat = Convert.ToString(a) + "√";
+                            b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                        }
+                        else
+                        {
+                            b = Convert.ToDouble(display.Text.Replace("√", ""));
+                        }
+                        display.Text = Convert.ToString(math.obecna_odmocnina(b, a));
+                        prazdna = 0;
                     }
                     else if (sinus == 1)
                     {
@@ -620,7 +639,9 @@ namespace src
                     {
                         if (display.Text == "0")
                         {
+                            a = 2;
                             display.Text = "√";
+                            prazdna = 1;
                         }
                         else
                         {
@@ -783,8 +804,16 @@ namespace src
                 else if (odmocnina == 1)
                 {
                     odmocnina = 0;
-                    string vymazat = Convert.ToString(a) + "√";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    if (prazdna == 0)
+                    {
+                        string vymazat = Convert.ToString(a) + "√";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
+                    else
+                    {
+                        b = Convert.ToDouble(display.Text.Replace("√", ""));
+                    }
+                    prazdna = 0;
                     try { display.Text = Convert.ToString(math.obecna_odmocnina(b, a));}
                     catch (InvalidOperationException ex)
                     {
@@ -884,9 +913,17 @@ namespace src
                 {
                     odmocnina = 0;
                     pomocna = 0;
-                    string vymazat = Convert.ToString(a) + "√";
-                    b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    if (prazdna == 0)
+                    {
+                        string vymazat = Convert.ToString(a) + "√";
+                        b = Convert.ToDouble(display.Text.Replace(vymazat, ""));
+                    }
+                    else
+                    {
+                        b = Convert.ToDouble(display.Text.Replace("√", ""));
+                    }
                     display.Text = Convert.ToString(math.obecna_odmocnina(b, a));
+                    prazdna = 0;
                 }
                 else if (sinus == 1)
                 {
