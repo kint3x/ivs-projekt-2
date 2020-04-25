@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 using System.Collections.Generic;
 using System.Text;
 
@@ -54,6 +55,11 @@ namespace mathlib
 		// Vrati N-tú odmocninu z čísla x
 		public static double Mocnina(double x, double n)
 		{ // funkcia ktora umocnuje
+			if (n % 1 != 0)
+			{
+				throw new InvalidOperationException("Nemožno použiť desatinné číslo ako mocninu!");
+			}
+
 			if (n == 0)
 			{
 				return 1;
@@ -124,6 +130,42 @@ namespace mathlib
 			} while (Absolutna(x - xPrev) > epsilon);
 		
 			return(x);
+		}
+
+		// vrati Ntu odmocninu z A
+		public static double obecna_odmocnina(double A, double N)
+		{
+			if (A < 0)
+			{
+				throw new InvalidOperationException("Odmocnina zo zaporneho cisla? Really?");
+			}
+			Random rand = new Random();
+			// nahodne cislo initial guess
+			// 0 - 9 
+			double xPre = rand.Next(10); ;
+
+			// epsilon presnost
+			double eps = 0.00001;
+
+			// initializing difference between two 
+			// roots by INT_MAX 
+			double delX = 2147483647;
+
+			// xK denotes current value of x 
+			double xK = 0.0;
+
+			// loop untill we reach desired accuracy 
+			while (delX > eps)
+			{
+				// calculating current value from previous 
+				// value by newton's method 
+				xK = ((N - 1.0) * xPre +
+				(double)A / Math.Pow(xPre, N - 1)) / (double)N;
+				delX = Math.Abs(xK - xPre);
+				xPre = xK;
+			}
+
+			return xK;
 		}
 
 	}
