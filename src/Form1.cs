@@ -514,7 +514,7 @@ namespace src
                     else if (sinus == 1)
                     {
                         a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
-                        display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
+                        display.Text = Convert.ToString(math.Sinus(a));
                         display.Text = "Sin " + display.Text;
                     }
                     else
@@ -613,7 +613,7 @@ namespace src
                         sinus = 0;
                         odmocnina = 1;
                         a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
-                        display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
+                        display.Text = Convert.ToString(math.Sinus(a));
                         display.Text = display.Text + "√";
                     }
                     else
@@ -799,7 +799,7 @@ namespace src
                 {
                     sinus = 0;
                     a = Convert.ToDouble(display.Text.Replace("Sin ", ""));
-                    display.Text = Convert.ToString(math.Sinus(a, 0.000000001));
+                    display.Text = Convert.ToString(math.Sinus(a));
                 }
                 nulovanie();
                 pomocna = 0;
