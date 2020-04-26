@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        /// Vyžadovaná designer premenná
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Uprace všetky zdroje ktoré boli použité
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true ak majú byť zdroje dispouznuté; inak, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
