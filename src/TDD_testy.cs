@@ -5,14 +5,23 @@ using mathlib;
 using System.IO;
 using System.Windows.Forms;
 using System.ComponentModel;
-
+/**
+ * \namespace TDD
+ * \brief Obsahuje triedu s tdd testami
+ */
 namespace TDD
 {
-
+    /*! \class TDD_testy
+    \brief Trieda v ktorej sú všetky TDD testy
+    Trieda vykoná testy a ich výsledok uloží do súboru TDD_testy.html
+	*/
     public class TDD_testy
     {
-        StreamWriter file;
-        //FUNKCIA SPUSTI VSETKY TESTY
+        StreamWriter file; //!< objekt pomocou ktorého sa vytvára súbor s výsledkami TDD
+        /**
+         * \brief Metóda ktorá spustí všetky ostatné fukncie ktoré testujú matematickú knižnicu
+         * Taktiež vygenereju súbor TDD_testy.html do ktorej sa zapisujú výsledky
+         */
         public void Spusti_testy()
         {
             if (File.Exists("TDD_testy.html"))
@@ -23,7 +32,6 @@ namespace TDD
             {
                 file.WriteLine("<html><head><title>VYSLEDKY TESTOV</title><style><style>table{font-family: arial, sans-serif;border-collapse: collapse;width: 100%;}td, th {border: 1px solid #dddddd;text-align: left;padding: 8px;}tr:nth-child(even){background-color: #dddddd;}</style></head><body><table><tr><th> TEST </th><th> VYSLEDOK </th></tr>");
                 file.WriteLine("<b>---- SUM TESTY ----</b><br>");
-                // sem pôjdu funkcie s testami postupne ako ich budeš robiť
                 SUC_TEST();
                 DEL_TEST();
                 ODC_TEST();
@@ -38,7 +46,10 @@ namespace TDD
             }
         }
 
-        // VYPIS STATUSU TESTOV
+        /**
+         * \brief Funkcia zapíše výsledok testu ak uspel s jeho ID
+         * \param id_test parameter, ktorý bude vypísaný ako ID testu
+         */
         private void Success_test(int id_test)
         {
             file.WriteLine("<tr>");
@@ -63,7 +74,9 @@ namespace TDD
 
         }
 
-        // TESTY 
+        /**
+         * \brief Testuje funkciu <code>math.Sucet</code>
+         */
         void SUC_TEST()
         { 
             try
@@ -87,6 +100,9 @@ namespace TDD
                 }
             }
         }
+        /**
+         * \brief Testuje funkciu <code>math.Delenie</code>
+         */
         void DEL_TEST()
         {
             try
@@ -109,7 +125,9 @@ namespace TDD
                 Success_test(5);
             }
         }
-
+        /**
+         * \brief Testuje funkciu <code>math.Rozdiel</code>
+         */
         void ODC_TEST()
         {
             try
@@ -127,6 +145,9 @@ namespace TDD
             }
         }
 
+        /**
+         * \brief Testuje funkciu <code>math.Nasobenie</code>
+         */
         void NAS_TEST()
         {
             try
@@ -143,7 +164,9 @@ namespace TDD
                 Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
             }
         }
-
+        /**
+         * \brief Testuje funkciu <code>math.Faktorial</code>
+         */
         void FAKT_TEST()
         {
             try
@@ -177,7 +200,9 @@ namespace TDD
                 }
             }
         }
-
+        /**
+         * \brief Testuje funkciu <code>math.Mocnina</code>
+         */
         void MOC_TEST()
         {
             try
@@ -204,6 +229,9 @@ namespace TDD
             }
         }
 
+        /**
+         * \brief Testuje funkciu <code>math.Absolutna</code>
+         */
         void ABS_TEST()
         {
             try
@@ -222,7 +250,9 @@ namespace TDD
                 Fail_test(string.Format("EXCEPTION = {0}", exception.Message), -1);
             }
         }
-
+        /**
+         * \brief Testuje funkciu <code>math.Sinus</code>
+         */
         void SIN_TEST()
         {
             try
@@ -245,7 +275,9 @@ namespace TDD
             }
         }
 
-       
+        /**
+          * \brief Testuje funkciu <code>math.findSqrt</code>
+          */
         void ODM_TEST()
         {
             try
@@ -280,18 +312,21 @@ namespace TDD
             }
 
         }
+        /**
+         * \brief Testuje funkciu <code>math.Obecna_odmocnina</code>
+         */
         void obecna_odmocnina_TEST()
         {
             try
             {
-                if (math.Absolutna(math.obecna_odmocnina(49,3) - 3.65930571) < 0.001) Success_test(25);
-                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.obecna_odmocnina(49, 3) - 3.65930571)), 25);
+                if (math.Absolutna(math.Obecna_odmocnina(49,3) - 3.65930571) < 0.001) Success_test(25);
+                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.Obecna_odmocnina(49, 3) - 3.65930571)), 25);
 
-                if (math.Absolutna(math.obecna_odmocnina(300, 5) - 3.129134645) < 0.001) Success_test(26);
-                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.obecna_odmocnina(300, 5) - 3.129134645)), 26);
+                if (math.Absolutna(math.Obecna_odmocnina(300, 5) - 3.129134645) < 0.001) Success_test(26);
+                else Fail_test(string.Format("Expected: <0.001 Got: {0}", math.Absolutna(math.Obecna_odmocnina(300, 5) - 3.129134645)), 26);
 
-                if (math.Absolutna(math.obecna_odmocnina(50, 30) - 1.139284879) < 0.001) Success_test(27);
-                else Fail_test(string.Format("Expected:{0} < 0.01", math.Absolutna(math.obecna_odmocnina(50, 30) - 1.139284879)), 27);
+                if (math.Absolutna(math.Obecna_odmocnina(50, 30) - 1.139284879) < 0.001) Success_test(27);
+                else Fail_test(string.Format("Expected:{0} < 0.01", math.Absolutna(math.Obecna_odmocnina(50, 30) - 1.139284879)), 27);
             }
             catch (InvalidOperationException exception)
             {
@@ -302,7 +337,7 @@ namespace TDD
             }
             try
             {
-                if (math.Absolutna(math.obecna_odmocnina(-1, 5))==0) Fail_test(string.Format("Didnt expect return"), 28);
+                if (math.Absolutna(math.Obecna_odmocnina(-1, 5))==0) Fail_test(string.Format("Didnt expect return"), 28);
                 else Fail_test(string.Format("Didnt expect return"), 28);
             }
             catch (InvalidOperationException exception)
