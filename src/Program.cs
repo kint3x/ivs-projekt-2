@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -11,7 +12,7 @@ namespace src
     static class Program
     {
         /// <summary>
-        /// The main entry point for the application.
+        /// Hlavný začiatočný bod programu
         /// </summary>
         [STAThread]
         static void Main()
@@ -20,12 +21,17 @@ namespace src
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
 
-            Console.WriteLine("TDD TESTY:");
-            TDD_testy testy = new TDD_testy();
-            testy.Spusti_testy();
+            
+            /**
+             * Ak je premenná <code>generate_tdd</code> nastavená na true, pri spustení programu sa generujú tdd testy
+             */
+            bool generate_tdd = true; //!< premenna ktorá určuje generovanie výsledkov z TDD testov
+            if (generate_tdd) {
+                TDD_testy testy = new TDD_testy();
+                testy.Spusti_testy();
+            }
 
 
-            // DOCASNE TESTY END
         }
     }
 }
