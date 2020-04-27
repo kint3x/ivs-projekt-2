@@ -693,6 +693,8 @@ namespace src
                         }
                         display.Text = Convert.ToString(math.Obecna_odmocnina(b, a));
                         prazdna = 0;
+                        a = Convert.ToDouble(display.Text);
+                        display.Text = display.Text + "√";
                     }
                     else if (sinus == 1)
                     {
