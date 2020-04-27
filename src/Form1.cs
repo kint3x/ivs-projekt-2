@@ -158,12 +158,16 @@ namespace src
         public void btn_del_Click(object sender, EventArgs e)
         {
             Is_exception();
-            if (display.Text == "Sin " || display.Text == "√")
+            if (display.Text == "Sin " || display.Text == "√" || display.Text == "-" )
             {
                 display.Text = "0";
                 sinus = 0;
                 odmocnina = 0;
                 prazdna = 0;
+                if (display.Text == "-")
+                {
+                    pomocna = 0;
+                }
             }
             else if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("!") || display.Text.EndsWith("√"))
             {
