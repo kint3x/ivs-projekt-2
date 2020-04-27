@@ -221,9 +221,19 @@ public class math
 		 * \param N odmocniteľ
 		 * \return Vráti Ntú odmocninu z čísla A
 		 * \exception InvalidOperationException ak je S záporné číslo
+		 * \exception InvalidOperationException ak je N celé číslo
+		 * \exception InvalidOperationException ak je N menšie ako 2
 		 */
 		public static double Obecna_odmocnina(double A, double N)
 		{
+			if (N % 1 != 0)
+			{
+				throw new InvalidOperationException("Odmocniteľ musí byť celé číslo");
+			}
+			if(N < 2)
+			{
+				throw new InvalidOperationException("Odmocniteľ nemôže byť menší ako 2");
+			}
 			if (A < 0)
 			{
 				throw new InvalidOperationException("Odmocnina zo zaporneho cisla? Really?");
