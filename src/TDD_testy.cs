@@ -56,22 +56,17 @@ namespace TDD
             file.WriteLine("<td>TEST[{0}]</td><td><b style='color:green;'>OK</b></td>",id_test);
             file.WriteLine("</tr>");
         }
-
+        /**
+         * \brief Funkcia zapíše výsledok testu ak neuspel s jeho ID a dôvodom
+         * \param id_test parameter, ktorý bude vypísaný ako ID testu
+         * \param result premenná do ktorej sa posiela dôvod prečo test neuspel
+         */
         private void Fail_test(string result, int id_test)
         {
             file.WriteLine("<tr>");
             file.Write("<td>TEST[{0}]</td><td><b style='color:red;'>FAIL = ", id_test);
             file.WriteLine("{0}</b></td>", result);
             file.WriteLine("</tr>");
-        }
-
-        private void Negative_fail(int id_test)
-        {
-            file.WriteLine("<tr>");
-            file.Write("<td>TEST[{0}]</td><td><b style='color:red;'>FAIL = ", id_test);
-            file.WriteLine("</b></td>");
-            file.WriteLine("</tr>");
-
         }
 
         /**
