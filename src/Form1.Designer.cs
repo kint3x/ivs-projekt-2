@@ -3,14 +3,14 @@
     partial class Form1
     {
         /// <summary>
-        /// Required designer variable.
+        /// Vyžadovaná designer premenná
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// Clean up any resources being used.
+        /// Uprace všetky zdroje ktoré boli použité
         /// </summary>
-        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        /// <param name="disposing">true ak majú byť zdroje dispouznuté; inak, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -341,7 +341,7 @@
             this.btn_sqrt.Name = "btn_sqrt";
             this.btn_sqrt.Size = new System.Drawing.Size(101, 49);
             this.btn_sqrt.TabIndex = 20;
-            this.btn_sqrt.Text = "√ x";
+            this.btn_sqrt.Text = "n √ x";
             this.btn_sqrt.UseVisualStyleBackColor = false;
             this.btn_sqrt.Click += new System.EventHandler(this.btn_sqrt_Click);
             // 
