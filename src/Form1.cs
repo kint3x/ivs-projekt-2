@@ -512,6 +512,7 @@ namespace src
        */
         public void btn_sin_Click(object sender, EventArgs e)
         {
+            Is_exception();
             try
             {
                 if (display.Text.EndsWith("+") || display.Text.EndsWith("-") || display.Text.EndsWith("*") || display.Text.EndsWith("/") || display.Text.EndsWith("Sin ") || display.Text.EndsWith("^") || display.Text.EndsWith("√"))
@@ -613,6 +614,7 @@ namespace src
             }
             catch (InvalidOperationException exception)
             {
+                sinus = 0;
                 exception_stav = 1;
                 Is_exception(exception.Message);
             }
