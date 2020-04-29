@@ -15,19 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_21CBB60CBA9B7C62E53D73502D9A399C"
-        "OwnerKey" = "8:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
+        "OwnerKey" = "8:_92BEF1F62924468B9A2E231E770F63D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_3F619DDF79794C58A3FF6C6F66BF5819"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_6B437D41884A40669A6B1A45D6EA51D0"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_92BEF1F62924468B9A2E231E770F63D6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,7 +46,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
+        "OwnerKey" = "8:_92BEF1F62924468B9A2E231E770F63D6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -68,6 +74,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -92,6 +106,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -157,6 +179,26 @@
             {
             "SourcePath" = "8:D:\\kalk\\calcICO.ico"
             "TargetName" = "8:calcICO.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B437D41884A40669A6B1A45D6EA51D0"
+            {
+            "SourcePath" = "8:..\\README.md"
+            "TargetName" = "8:README.md"
             "Tag" = "8:"
             "Folder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
             "Condition" = "8:"
@@ -350,7 +392,7 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_264EECFF624446D3841DCAE9CE53AA0A"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_6473E8E4DAD7459C9C575ABF49EDB9AE"
             {
             "Name" = "8:Kalkulacka"
             "Arguments" = "8:"
@@ -358,13 +400,13 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
+            "Target" = "8:_92BEF1F62924468B9A2E231E770F63D6"
             "Folder" = "8:_5325424C97FB414ABC04F59451D4BD50"
             "WorkingFolder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
             "Icon" = "8:_3F619DDF79794C58A3FF6C6F66BF5819"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EBE01DAB1C4D4B208CBC35E7AE901255"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_E75BF70DC9754358B0BD73ACEACEDA2B"
             {
             "Name" = "8:Kalkulacka"
             "Arguments" = "8:"
@@ -372,7 +414,7 @@
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
+            "Target" = "8:_92BEF1F62924468B9A2E231E770F63D6"
             "Folder" = "8:_DE10074B189649F6994E39E9A3B036D3"
             "WorkingFolder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
             "Icon" = "8:_3F619DDF79794C58A3FF6C6F66BF5819"
@@ -777,7 +819,7 @@
         }
         "ProjectOutput"
         {
-            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_1F5CFD088C6E432BAB7B3F3D13C7D2B5"
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_92BEF1F62924468B9A2E231E770F63D6"
             {
             "SourcePath" = "8:..\\src\\obj\\Release\\src.exe"
             "TargetName" = "8:"
