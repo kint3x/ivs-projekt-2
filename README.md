@@ -34,7 +34,15 @@ Poèkajte kım sa program odinštaluje a kliknite na 'Close'
 
 ## Obsluha aplikácie
 
-
+Pre pouitie základnıch matematickıch funkcií '+, -, *, /' zvo¾te poadované èíslo, potom dané znamienko a druhé èíslo
+Ak chcete poèita s desatinnım èíslom zv¾te poèas zadávania èísla desatinnú èiarku pri tlaèítku '0'
+Vısledok môete potvrdi tlaèitkom '=' alebo pokraèova v poèítaní zadaním ïalšieho znamienka
+Pre pouitie funkcie sínus stlaète tlaèítko 'sin' a následne èíselnú hodnotu (alebo naopak) a následne potvrïte s '='
+Pre pouitie funkcie faktoriál zadajte èíslo, následne stlaète tlaèítko 'x!' a potvrïte s '='
+Pre pouitie funkcie odmocniny zadajte najprv èíslo **ktorım** chcete odmocni, potom stlaète 'n?x' a následne èíslo **ktoré** chcete odmocni a potvrïte s '='
+Pre pouitie funkcie mocniny zadajte najprv èíslo **ktoré** chcete umocni, potom stlaète 'x^n' a následne èíslo **ktorım** chcete umocni a potvrïte s '='
+Pre vymazanie postupne od posledného vloeného znaku pouite tlaèítko 'DEL'
+Pre vynulovanie kalkulaèky stlaète tlaèítko 'AC'
 
 ## Debugging
 
