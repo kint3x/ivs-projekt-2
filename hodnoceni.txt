@@ -1,0 +1,4 @@
+xmatej55 166% (planovanie, kontrola dodrziavania terminov, github, mathlib, debugging, TDD ,Doxyfile)
+xdvors14 133% (Makefile, GUI, prepojenie GUI, report chýb, Mockup, Dokumentácia)
+xbabic11 100% (Readme, Install uninstall)
+xbenov00 30%  (*snaha*)

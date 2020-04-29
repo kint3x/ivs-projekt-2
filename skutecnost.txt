@@ -1,0 +1,12 @@
+Porovnanie skutoènos vs plán
+Readme-> Po vzájomnej dohode sme posunuli deadline Readme pretože na nej nezáležala iná èas projektu
+TDD_Testy -> Po dlhej prokrastinácii plánovaného tvorcu testov sa ich 2 týždne po deadline rozhodol urobi druhý èlen tímu 
+Makefile -> Odloženie termínu pretože na òom nezáležala iná èas projektu a taktiež sme narazili na problém s vytváraním Makefile pre C#  Visual Studio (nie je kompletné)
+Dokumentácia -> Dokumentácia nebola èlenom odovzdaná, odovzdaná bola druhým èlenom tímu
+Profiling -> Problémom bol nedostatoèná skúsenos prográmatora s daným jazykom (C#)
+Debugging -> Debugging bol vykonávaný po celú dobu  trvania projektu (screen nahraný na záver)
+Doxyfile -> Pôvodný autor svoju prácu neodovzdal do deadlinu, vypracoval druhý èlen tímu
+
+Ostatné skutoènosti, termíny a komunikaèné kanály boli dodržané pod¾a plánu.
+xbenov00 - nedodržiavnie deadlinov, nevypracovanie zadanej práce, nepriama komunikácia
+Ostatní èlenovia tímu si plnili svoje povinosti nad rámec zadaných úloh. 
