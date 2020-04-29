@@ -21,13 +21,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_3F619DDF79794C58A3FF6C6F66BF5819"
+        "MsmKey" = "8:_2EDB4A5923C74C809BA6DC00394DF1CC"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6B437D41884A40669A6B1A45D6EA51D0"
+        "MsmKey" = "8:_3194A26616B34EBCB83D4F70E2E5E600"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_3F619DDF79794C58A3FF6C6F66BF5819"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,13 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_21CBB60CBA9B7C62E53D73502D9A399C"
+        "OwnerKey" = "8:_92BEF1F62924468B9A2E231E770F63D6"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_92BEF1F62924468B9A2E231E770F63D6"
+        "OwnerKey" = "8:_21CBB60CBA9B7C62E53D73502D9A399C"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -175,10 +181,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F619DDF79794C58A3FF6C6F66BF5819"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2EDB4A5923C74C809BA6DC00394DF1CC"
             {
-            "SourcePath" = "8:D:\\kalk\\calcICO.ico"
-            "TargetName" = "8:calcICO.ico"
+            "SourcePath" = "8:..\\README.md"
+            "TargetName" = "8:README.md"
             "Tag" = "8:"
             "Folder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
             "Condition" = "8:"
@@ -195,10 +201,30 @@
             "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_6B437D41884A40669A6B1A45D6EA51D0"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3194A26616B34EBCB83D4F70E2E5E600"
             {
-            "SourcePath" = "8:..\\README.md"
-            "TargetName" = "8:README.md"
+            "SourcePath" = "8:..\\dokumentace.pdf"
+            "TargetName" = "8:dokumentace.pdf"
+            "Tag" = "8:"
+            "Folder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3F619DDF79794C58A3FF6C6F66BF5819"
+            {
+            "SourcePath" = "8:D:\\kalk\\calcICO.ico"
+            "TargetName" = "8:calcICO.ico"
             "Tag" = "8:"
             "Folder" = "8:_55B755B216CD4C5C96E6C0D8CC7CA16C"
             "Condition" = "8:"
@@ -272,7 +298,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Kalkulacka"
         "ProductCode" = "8:{3B9803E3-CB7A-4FD6-909F-FB596A73C915}"
-        "PackageCode" = "8:{D3E90271-D69B-4AFC-A9A8-35136EC984DA}"
+        "PackageCode" = "8:{4C77A680-3BA3-41ED-B7D5-6BBA2963A71B}"
         "UpgradeCode" = "8:{65090480-449B-4531-B2D4-CC032A48213F}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
