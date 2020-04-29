@@ -625,6 +625,7 @@ namespace src
         */
         private void btn_sqrt_Click(object sender, EventArgs e)
         {
+            Is_exception();
             try
             {
                 pomocna = 0;
