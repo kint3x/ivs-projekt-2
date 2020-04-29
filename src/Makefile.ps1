@@ -10,7 +10,7 @@ if ($args[0] -eq "pack")
 
 	$source = $scriptPath+"repo"
 
-	$destination = $scriptPath+"xmatej55_xdvors14_xbabic11_xbenov00_plan.zip"
+	$destination = $scriptPath+"xmatej55_xdvors14_xbabic11_xbenov00.zip"
 
 
 	if (Test-path $destination) 
